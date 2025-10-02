@@ -5,21 +5,52 @@ title: "Home"
 
 <!-- Personal intro section -->
 <div style="text-align:center; margin-bottom:2em;">
-  <img src="/assets/images/image.jpg" alt="Daud Hasan" style="width:200px; height:200px; border-radius:50%; object-fit:cover;">
-  <h2>Daud Hasan</h2>
-  <p><strong>Master’s Student, <a href="https://www.cuet.ac.bd/">CUET</a></strong></p>
-  <p><a href="/assets/cv.pdf">📄 Download my CV</a></p>
+  <img src="/assets/images/profile.jpg" alt="Daud Hasan"
+       style="width:250px; height:250px; border-radius:50%; object-fit:cover;">
+  <h1>Daud Hasan</h1>
+  <p><strong>M.Sc. in Mechanical Engineering, Chittagong University of Engineering & Technology (CUET)</strong></p>
+  <p><a href="/assets/files/cv.pdf">📄 Download my CV</a></p>
 </div>
 
-{% if site.show_excerpts %}
-  {% for post in site.posts %}
-    <article>
-      {% include meta.html post=post %}
-      {{ post.excerpt }}
-      <footer class="button"><a href="{{ post.url | relative_url }}">read more</a></footer>
-    </article>
-  {% endfor %}
-{% else %}
-  {% capture source %}{% include_relative archive.html title="Posts" %}{% endcapture %}
-  {{ source | split: "---" | last }}
-{% endif %}
+<!-- About Me -->
+<section>
+  <h2>About Me</h2>
+  <p>
+    Daud Hasan is currently pursuing a Master of Science in Mechanical Engineering at Chittagong University of Engineering and Technology (CUET), under the supervision of Dr. Mamunur Roshid. His research focuses on turbulent boundary layers over flat plates, particularly investigating the effects using RANS models.
+    He previously completed his undergraduate thesis in thermofluidics at Hajee Mohammad Danesh Science and Technology University (HSTU), where he worked under the guidance of Md. Jisan Mahmud. His project explored the lid-driven cavity flow problem and examined the influence of magnetic effects on fluid behavior.
+  </p>
+</section>
+
+<!-- Research Interests -->
+<section>
+  <h2>Research Interests</h2>
+  <ul>
+    <li>Turbulent flows and boundary layer dynamics</li>
+    <li>Computational Fluid Dynamics (CFD)</li>
+    <li>Heat transfer and thermofluidics</li>
+    <li>Numerical methods for fluid mechanics</li>
+  </ul>
+</section>
+
+<!-- Education -->
+<section>
+  <h2>Education</h2>
+  <ul>
+    <li><strong>M.Sc.</strong> in Mechanical Engineering — CUET (ongoing)</li>
+    <li><strong>B.Sc.</strong> in Mechanical Engineering — HSTU</li>
+  </ul>
+</section>
+
+<!-- Latest News -->
+<section>
+  <h2>Latest News</h2>
+  <ul>
+    <li>[2025] Started M.Sc. research on turbulent flows at CUET</li>
+    <li>[2025] Paper published in Annals of Nuclear Energy</li>
+    <li>[2024] Paper published in International Journal of Heat and Fluid Flow</li>
+    
+  </ul>
+</section>
+
+
+---
