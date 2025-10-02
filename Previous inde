@@ -1,0 +1,25 @@
+---
+layout: default
+title: "Home"
+---
+
+<!-- Personal intro section -->
+<div style="text-align:center; margin-bottom:2em;">
+  <img src="/assets/images/image.jpg" alt="Daud Hasan" style="width:200px; height:200px; border-radius:50%; object-fit:cover;">
+  <h2>Daud Hasan</h2>
+  <p><strong>Master’s Student, <a href="https://www.cuet.ac.bd/">CUET</a></strong></p>
+  <p><a href="/assets/cv.pdf">📄 Download my CV</a></p>
+</div>
+
+{% if site.show_excerpts %}
+  {% for post in site.posts %}
+    <article>
+      {% include meta.html post=post %}
+      {{ post.excerpt }}
+      <footer class="button"><a href="{{ post.url | relative_url }}">read more</a></footer>
+    </article>
+  {% endfor %}
+{% else %}
+  {% capture source %}{% include_relative archive.html title="Posts" %}{% endcapture %}
+  {{ source | split: "---" | last }}
+{% endif %}
