@@ -22,6 +22,9 @@ navigation:
   - {title: "Publications", url: "/personal-site/publications.html"}
   - {title: "CAD Portfolio", url: "/personal-site/cad.html"}
 
+include:
+  - publications.html
+
 external:                       # accepts {file, title, url, icon, sidebaricon}
   - {title: Mail, icon: envelope, url: "mailto:daud.hasan597@gmail.com"}
   - {title: Github, icon: github, url: "https://github.com/daud-hasan"}
