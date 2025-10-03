@@ -1,12 +1,156 @@
----
-layout: default
-title: "CAD Portfolio"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<h2>CAD Portfolio</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daud Hasan – CAD Portfolio</title>
 
-<p>This is a showcase of my CAD work:</p>
+  <!-- Link to your main CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
 
-<img src="/assets/cad/cad-portfolio.jpg" 
-     alt="CAD Portfolio Example" 
-     style="max-width:800px; width:100%; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.3); margin-top:20px;">
+  <!-- Inline styles for dark theme and image gallery -->
+  <style>
+    body {
+      background-color: #111; /* same dark background as homepage */
+      color: #f1f1f1; /* light text */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 80px auto 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .portfolio-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .portfolio-item {
+      flex: 1 1 300px;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s;
+    }
+
+    .portfolio-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .caption {
+      margin-top: 8px;
+      font-size: 0.95em;
+      color: #ccc;
+    }
+
+    /* Sidebar same as homepage */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background-color: #575757;
+    }
+
+    .openbtn {
+      font-size: 22px;
+      cursor: pointer;
+      background-color: #111;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 2;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .portfolio-item {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <a href="/">Home</a>
+    <a href="/publications.html">Publications</a>
+    <a href="/cad.html">CAD Portfolio</a>
+  </div>
+
+  <button class="openbtn" onclick="toggleSidebar()">☰ Menu</button>
+
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.getElementById("mySidebar");
+      if (sidebar.style.width === "250px") {
+        sidebar.style.width = "0";
+      } else {
+        sidebar.style.width = "250px";
+      }
+    }
+  </script>
+
+  <!-- Main content -->
+  <div class="content">
+    <h2>CAD Portfolio</h2>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="/assets/cad/cad-portfolio.jpg" alt="CAD Project 1">
+        <div class="caption">CAD Project 1</div>
+      </div>
+      <!-- You can add more portfolio items here -->
+      <!-- Example:
+      <div class="portfolio-item">
+        <img src="/assets/cad/cad-portfolio-2.jpg" alt="CAD Project 2">
+        <div class="caption">CAD Project 2</div>
+      </div>
+      -->
+    </div>
+  </div>
+
+</body>
+</html>
