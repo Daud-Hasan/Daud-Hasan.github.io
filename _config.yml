@@ -18,9 +18,9 @@ show_minimal: true              # remove all clutter
 # Menu                          # for available icons see https://fontawesome.com/v5/icons/
 
 navigation:
-  - {title: "Home", url: "/"}
-  - {title: "Publications", url: "/publications.html"}
-  - {title: "CAD Portfolio", url: "/cad.html"}
+  - {title: "Home", url: "/personal-site/"}
+  - {title: "Publications", url: "/personal-site/publications.html"}
+  - {title: "CAD Portfolio", url: "/personal-site/cad.html"}
 
 external:                       # accepts {file, title, url, icon, sidebaricon}
   - {title: Mail, icon: envelope, url: "mailto:daud.hasan597@gmail.com"}
