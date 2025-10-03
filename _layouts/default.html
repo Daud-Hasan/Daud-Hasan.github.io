@@ -3,21 +3,77 @@
 
 {% include head.html %}
 
-<header class="hover smooth">
-  {% unless site.show_minimal and site.navigation and site.external %}
-    <h1 {% if site.navigation and site.external %}class="full"{% endif %}><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
-  {% endunless %}
-  {% include menu.html menu=site.navigation %}
-  {% include menu.html menu=site.external %}
-</header>
+<body>
 
-{{ content }}
+<!-- Sidebar Menu -->
+<style>
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+  }
+  .sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.2s;
+  }
+  .sidebar a:hover {
+    background-color: #575757;
+  }
+  .openbtn {
+    font-size: 22px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+  }
+</style>
+
+<div id="mySidebar" class="sidebar">
+  <a href="/">Home</a>
+  <a href="/publications.html">Publications</a>
+  <a href="/cad.html">CAD Portfolio</a>
+</div>
+
+<button class="openbtn" onclick="toggleSidebar()">☰</button>
+
+<script>
+function toggleSidebar() {
+  var sidebar = document.getElementById("mySidebar");
+  if (sidebar.style.width === "250px") {
+    sidebar.style.width = "0";
+  } else {
+    sidebar.style.width = "250px";
+  }
+}
+</script>
+
+<!-- Page content -->
+<div style="margin-left:20px; padding:20px;">
+  {{ content }}
+</div>
 
 {%- if site.footer -%}
-<footer class="hover">
+<footer class="hover" style="margin-top: 50px;">
   <div>{{ site.description }}</div>
   {% include menu.html menu=site.footer %}
 </footer>
 {%- endif -%}
 
+</body>
 </html>
