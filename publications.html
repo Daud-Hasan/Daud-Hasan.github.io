@@ -9,17 +9,17 @@
   <!-- Link to your main CSS -->
   <link rel="stylesheet" href="/assets/css/style.css">
 
-  <!-- Inline styles for dark theme & content formatting -->
+  <!-- Inline styles for dark theme & buttons -->
   <style>
     body {
       background-color: #111; /* dark background same as homepage */
-      color: #f1f1f1;         /* light text */
+      color: #f1f1f1; /* light text */
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
     a {
-      color: #1e90ff; /* links in blue */
+      color: #1e90ff;
       text-decoration: none;
     }
     a:hover {
@@ -39,8 +39,23 @@
       padding-left: 20px;
     }
     li {
-      margin-bottom: 1.5em;
+      margin-bottom: 2em;
       line-height: 1.6em;
+    }
+
+    /* PDF button style */
+    .pdf-btn {
+      display: inline-block;
+      background-color: #1e90ff;
+      color: white;
+      padding: 6px 12px;
+      font-size: 0.9em;
+      border-radius: 5px;
+      margin-left: 10px;
+      transition: background-color 0.2s;
+    }
+    .pdf-btn:hover {
+      background-color: #0d6efd;
     }
 
     /* Sidebar styles same as homepage */
@@ -113,7 +128,7 @@
         “Impact of magnetic field on conjugate mixed convection heat transfer in a lid-driven triangular enclosure with an inclined wavy wall and internal heat generation.”  
         <i>International Journal of Heat and Fluid Flow</i>, 110, 109609.  
         DOI: <a href="https://doi.org/10.1016/j.ijheatfluidflow.2024.109609" target="_blank">10.1016/j.ijheatfluidflow.2024.109609</a>  
-        <a href="/assets/papers/Daud_P1.pdf" target="_blank">[PDF]</a>
+        <a class="pdf-btn" href="/assets/papers/Daud_P1.pdf" target="_blank">PDF</a>
       </li>
 
       <li>
@@ -121,7 +136,7 @@
         “Magnetohydrodynamic (MHD) effects on conjugate mixed convection in a triangular enclosure with swirling reactive fluid: A computational approach.”  
         <i>Annals of Nuclear Energy</i>, 223, 111686.  
         DOI: <a href="https://doi.org/10.1016/j.anucene.2025.111686" target="_blank">10.1016/j.anucene.2025.111686</a>  
-        <a href="/assets/papers/Daud_P2.pdf" target="_blank">[PDF]</a>
+        <a class="pdf-btn" href="/assets/papers/Daud_P2.pdf" target="_blank">PDF</a>
       </li>
     </ol>
   </div>
